@@ -1,0 +1,17 @@
+{
+  "kind": "singleType",
+  "collectionName": "site_titles",
+  "info": {
+    "name": "Site title"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    }
+  }
+}

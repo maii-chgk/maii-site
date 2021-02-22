@@ -1,10 +1,10 @@
 {
-  "name": "cms",
+  "name": "oz-cms",
   "private": true,
   "version": "0.1.0",
-  "description": "A Strapi application",
+  "description": "OZ Strapi CMS",
   "scripts": {
-    "develop": "strapi develop",
+    "dev": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi"
@@ -23,14 +23,14 @@
     "strapi-utils": "3.5.0"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Eugene Mirotin"
   },
   "strapi": {
     "uuid": "b1f81e72-e207-4592-b388-c06f07a4c175"
   },
   "engines": {
-    "node": ">=10.16.0 <=14.x.x",
+    "node": ">=12 <=14",
     "npm": "^6.0.0"
   },
-  "license": "MIT"
+  "license": "Unlicensed"
 }
