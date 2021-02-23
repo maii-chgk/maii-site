@@ -1,11 +1,12 @@
-const markdownIt = require("markdown-it");
+const MarkdownIt = require("markdown-it");
 
 module.exports = function (eleventyConfig) {
-  const md = new markdownIt({
+  const md = new MarkdownIt({
     html: true,
+    typographer: true,
   });
 
-  eleventyConfig.addPairedShortcode("markdown", (content) =>
-    md.render(content)
-  );
+  eleventyConfig.addPairedShortcode("markdown", (content) => {
+    return md.render(content);
+  });
 };

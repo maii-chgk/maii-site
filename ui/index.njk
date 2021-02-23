@@ -8,11 +8,11 @@
 
   <section>
     {# NB: do not split/indent the following line and other MD blocks #}
-    {% markdown %}{{ index_page.Lead }}{% endmarkdown %}
+    {% markdown %}{{ index_page.Lead | safe }}{% endmarkdown %}
   </section>
 
   <section>
-    {% markdown %}{{ index_page.Main }}{% endmarkdown %}
+    {% markdown %}{{ index_page.Main | safe }}{% endmarkdown %}
   </section>
 
   <section>
@@ -21,7 +21,7 @@
       <li>
         <h3>{{ feature.Title }}</h3>
         <section>
-          {% markdown %}{{ feature.Description }}{% endmarkdown %}
+          {% markdown %}{{ feature.Description | safe }}{% endmarkdown %}
         </section>
       </li>
     {% endfor %}
@@ -29,8 +29,12 @@
   </section>
 
   <section>
-    {% markdown %}{{ index_page.Main2 }}{% endmarkdown %}
+    {% markdown %}{{ index_page.Main2 | safe }}{% endmarkdown %}
   </section>
+
+  <footer>
+    &copy; 2021 Евгений Миротин и др. авторы.
+  </footer>
 
   <script>
     (function(){
