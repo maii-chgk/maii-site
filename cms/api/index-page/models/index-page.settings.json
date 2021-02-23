@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "index_pages",
+  "info": {
+    "name": "Index Page",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Lead": {
+      "type": "richtext"
+    },
+    "Main": {
+      "type": "richtext"
+    },
+    "Features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "features.features"
+    },
+    "Main2": {
+      "type": "richtext"
+    }
+  }
+}

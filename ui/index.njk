@@ -1,9 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>{{ site_title.Title }}</title>
+  <title>{{ index_page.Title }}</title>
 </head>
 <body>
-  <h1>{{ site_title.Title }}</h1>
+  <h1>{{ index_page.Title }}</h1>
+
+  <section>
+    {# NB: do not split/indent the following line and other MD blocks #}
+    {% markdown %}{{ index_page.Lead }}{% endmarkdown %}
+  </section>
+
+  <section>
+    {% markdown %}{{ index_page.Main }}{% endmarkdown %}
+  </section>
+
+  <section>
+    <ul>
+    {% for feature in index_page.Features %}
+      <li>
+        <h3>{{ feature.Title }}</h3>
+        <section>
+          {% markdown %}{{ feature.Description }}{% endmarkdown %}
+        </section>
+      </li>
+    {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    {% markdown %}{{ index_page.Main2 }}{% endmarkdown %}
+  </section>
+
+  <script>
+    (function(){
+      [...document.querySelectorAll('a')].forEach(a => {
+        if ((a.getAttribute('href') || '').match(/^https?:\/\//)) {
+          a.setAttribute('target', '_blank');
+        }
+      });
+    }())
+  </script>
 </body>
 </html>
