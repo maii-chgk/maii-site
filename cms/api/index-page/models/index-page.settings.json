@@ -21,12 +21,18 @@
     "Main": {
       "type": "richtext"
     },
+    "FeaturesTitle": {
+      "type": "string"
+    },
     "Features": {
       "type": "component",
       "repeatable": true,
       "component": "features.features"
     },
     "Main2": {
+      "type": "richtext"
+    },
+    "Footer": {
       "type": "richtext"
     }
   }

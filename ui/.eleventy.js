@@ -9,4 +9,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPairedShortcode("markdown", (content) => {
     return md.render(content);
   });
+
+  eleventyConfig.addPassthroughCopy("css");
 };

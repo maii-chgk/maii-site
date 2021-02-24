@@ -1,0 +1,27 @@
+html,
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+html {
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  font-size: 120%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Slab", sans-serif;
+}
+
+.section-full {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
