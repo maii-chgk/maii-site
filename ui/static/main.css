@@ -1,14 +1,10 @@
-html,
-body {
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
-}
-
 html {
+  height: 100%;
   font-family: "Rubik", sans-serif;
 }
 
 body {
+  height: 100%;
   font-size: 120%;
 }
 
@@ -24,4 +20,5 @@ h6 {
 .section-full {
   min-height: 100vh;
   min-height: -webkit-fill-available;
+  min-height: fill-available;
 }
