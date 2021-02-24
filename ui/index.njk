@@ -9,6 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Roboto+Slab&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="/static/main.css" />
 
+  <meta property="og:title" content="{{ index_page.Title }}" />
+  <meta property="og:locale" content="ru_RU" />
+  {% if env.HOST %}
+    <meta property="og:url" content="{{ env.HOST }}" />
+    <meta property="og:image" content="{{ env.HOST }}/static/favicon-512.png" />
+  {% endif %}
+
   <link rel="icon" href="/static/favicon.ico"><!-- 32×32 -->
   <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/static/apple-touch-icon.png"><!-- 180×180 -->
