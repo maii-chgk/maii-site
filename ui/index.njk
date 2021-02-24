@@ -10,7 +10,9 @@
   <link rel="stylesheet" href="/static/main.css" />
 
   <meta property="og:title" content="{{ index_page.Title }}" />
+  <meta property="og:description" content="{{ index_page.Lead }}" />
   <meta property="og:locale" content="ru_RU" />
+  <meta property="og:type" content="website" />
   {% if env.HOST %}
     <meta property="og:url" content="{{ env.HOST }}" />
     <meta property="og:image" content="{{ env.HOST }}/static/favicon-512.png" />
