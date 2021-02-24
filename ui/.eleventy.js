@@ -10,5 +10,5 @@ module.exports = function (eleventyConfig) {
     return md.render(content);
   });
 
-  eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("static");
 };
