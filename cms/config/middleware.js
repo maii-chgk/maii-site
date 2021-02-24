@@ -1,6 +1,6 @@
 const zlib = require("zlib");
 
-module.expots = {
+module.exports = {
   gzip: {
     enabled: true,
     options: {
