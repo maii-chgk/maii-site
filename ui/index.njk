@@ -84,6 +84,7 @@
       [...document.querySelectorAll('a')].forEach(a => {
         if ((a.getAttribute('href') || '').match(/^https?:\/\//)) {
           a.setAttribute('target', '_blank');
+          a.setAttribute('rel', 'noopener');
         }
       });
     }())
