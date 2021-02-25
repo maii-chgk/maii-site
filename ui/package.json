@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "eleventy --serve",
-    "build": "eleventy"
+    "build": "NODE_ENV=production eleventy && workbox generateSW workbox-config.js"
   },
   "keywords": [],
   "author": "Eugene Mirotin",
@@ -13,7 +13,8 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
     "axios": "^0.21.1",
-    "markdown-it": "^12.0.4"
+    "markdown-it": "^12.0.4",
+    "workbox-cli": "^6.1.1"
   },
   "dependencies": {
     "dotenv": "^8.2.0"

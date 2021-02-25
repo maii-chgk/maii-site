@@ -1,9 +1,17 @@
 {
+  "name": "Новая Организация Знатоков",
+  "short_name": "Знатоки",
+  "theme_color": "#1e87f0",
+  "background_color": "#1e87f0",
+  "display": "minimal-ui",
+  "scope": "/",
+  "start_url": "/",
   "icons": [
     {
       "src": "/static/favicon-192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any maskable"
     },
     {
       "src": "/static/favicon-512.png",
