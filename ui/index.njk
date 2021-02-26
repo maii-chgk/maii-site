@@ -27,7 +27,7 @@
   <link rel="manifest" href="/static/manifest.webmanifest">
 </head>
 <body>
-  <section class="uk-section uk-section-primary uk-flex uk-flex-middle uk-text-center section-full">
+  <section class="uk-section uk-section-primary uk-flex uk-flex-middle uk-text-center section-full section-lead">
     <div class="uk-container">
       <h1 class="uk-margin-large-bottom">{{ index_page.Title }}</h1>
       <div class="uk-text-lead">
@@ -35,6 +35,7 @@
         {% markdown %}{{ index_page.Lead | safe }}{% endmarkdown %}
       </div>
     </div>
+    <div class="scroll-hint">{% include "./index/chevron-down.svg" %}</div>
   </section>
 
   <section class="uk-section uk-section-secondary">
