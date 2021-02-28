@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<custombuttons xmlns="http://toolbar.google.com/custombuttons/">
+  <button>
+    <title>ChGK Database Search</title>
+    <title locale="ru">Поиск в Базе вопросов ЧГК</title>
+    <description>Search by db.chgk.info</description>
+    <description locale="ru">Поиск в Базе вопросов ЧГК</description>
+    <search charset="KOI8-R">http://db.chgk.info/znatoki/cgi-bin/db.cgi?sstr={query}&amp;kvo=20&amp;type=chgk&amp;type=brain&amp;type=igp&amp;type=game&amp;type=ehruditka&amp;type=beskrylka&amp;metod=rus&amp;all=yes&amp;searchin=Question&amp;searchin=Answer&amp;searchin=PassCriteria&amp;searchin=Comments&amp;.cgifields=searchin</search>
+    <site>http://db.chgk.info</site>
+  <icon mode="base64" type="image/x-icon">AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAwAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAgICAAMDAwAAAAP8A
+AP8AAAD//wD/AAAA/wD/AP//AAD///8AAAMzAzAzMAAAAAADMAAAAAAAAAMwAAAAAAAz
+AzAzAAAAMzMzMzMzAAMzADMzADMwMzAAAzAAAzMzADMDMDMAMzMAMwMwMwAzMwAzAzAz
+ADMzADMDMDMAMzMwAAMwAAMzAzMAMzMAMzAAAzMzMzMzAAADMwAAMzAAADAAAAAAAwDi
+RwAA/n8AAP5/AADyTwAAwAMAAIwxAAAeeAAAMkwAADJMAAAyTAAAMkwAAB54AACMMQAA
+4AMAAOPHAADf+wAA</icon><update>http://www.chgk.info/searchdb.xml</update>
+  </button>
+<update>http://www.chgk.info/searchdb.xml</update>
+</custombuttons>
