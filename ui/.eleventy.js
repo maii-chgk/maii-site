@@ -2,6 +2,9 @@ const MarkdownIt = require("markdown-it");
 const formatDate = require("date-fns/format");
 const parseDate = require("date-fns/parse");
 const { ru } = require("date-fns/locale");
+const cacheBuster = require("@mightyplow/eleventy-plugin-cache-buster");
+
+const isDev = process.env.NODE_ENV !== "production";
 
 module.exports = function (eleventyConfig) {
   const md = new MarkdownIt({
@@ -27,5 +30,11 @@ module.exports = function (eleventyConfig) {
     return md.render(content);
   });
 
-  eleventyConfig.addPassthroughCopy("static");
+  if (isDev) {
+    // in build we copy the files before the 11ty build
+    // it's require for the cache busting plugin to work reliably
+    eleventyConfig.addPassthroughCopy("static");
+  }
+
+  eleventyConfig.addPlugin(cacheBuster({}));
 };
