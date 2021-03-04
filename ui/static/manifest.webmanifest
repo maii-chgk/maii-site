@@ -1,6 +1,8 @@
 {
   "name": "Новая Организация Знатоков",
   "short_name": "Знатоки",
+  "lang": "ru-RU",
+  "dir": "ltr",
   "theme_color": "#1e87f0",
   "background_color": "#1e87f0",
   "display": "minimal-ui",

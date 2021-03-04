@@ -1,0 +1,23 @@
+---
+layout: content
+pagination:
+    data: news
+    size: 1
+    alias: newsItem
+permalink: "news/{{ newsItem.Date }}-{{ newsItem.Title | slug }}/"
+eleventyComputed:
+  pageTitle: "{{ newsItem.Title }}"
+  pageDescription: "{{ newsItem.Lead }}"
+---
+
+<section class="uk-section uk-section-default">
+  <div class="uk-container">
+    <h1></h1>
+    <article class="uk-article">
+      <h1 class="uk-article-title">{{ newsItem.Title }}</h1>
+      <p class="uk-article-meta">{{ newsItem.Date | date }}</p>
+      {% if newsItem.Lead %}<p class="uk-text-lead">{{ newsItem.Lead }}</p>{% endif %}
+      {% if newsItem.Body %}{% markdown %}{{ newsItem.Body | safe }}{% endmarkdown %}{% endif %}
+    </article>
+  </div>
+</section>

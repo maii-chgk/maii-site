@@ -1,0 +1,21 @@
+---
+layout: content
+pageTitle: Новости
+eleventyComputed:
+  pageDescription: "{{ index_page.Title }} — Новости"
+---
+
+<section class="uk-section uk-section-default">
+  <div class="uk-container">
+    <h1>Новости</h1>
+    {% for newsItem in news | sort(true, false, 'Date') %}
+      <div class="uk-card uk-card-body uk-width-1-1">
+        <h2 class="uk-card-title">
+          <span class="uk-text-muted">{{ newsItem.Date | date }}:</span>
+          <a href="/news/{{ newsItem.Date }}-{{ newsItem.Title | slug }}/">{{ newsItem.Title }}</a>
+        </h2>
+        {% if newsItem.Lead %}<p>{{ newsItem.Lead }}</p>{% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
