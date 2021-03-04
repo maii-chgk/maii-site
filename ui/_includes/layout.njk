@@ -38,7 +38,14 @@ bodyElements: 2
 
   <footer class="uk-section uk-section-muted uk-section-small">
     <div class="uk-container uk-text-small uk-text-muted">
-      {% markdown %}{{ index_page.Footer | safe }}{% endmarkdown %}
+      <div class="uk-grid uk-grid-divider uk-child-width-expand@s" uk-grid>
+        <div class="uk-first-column">
+          <ul class="uk-nav">
+            <li><a href="/contact">Обратная связь</a></li>
+          </ul>
+        </div>
+        <div class="uk-text-right">{% markdown %}{{ index_page.Footer | safe }}{% endmarkdown %}</div>
+      </div>
     </div>
   </footer>
 
@@ -57,6 +64,14 @@ bodyElements: 2
         if ((a.getAttribute('href') || '').match(/^https?:\/\//)) {
           a.setAttribute('target', '_blank');
           a.setAttribute('rel', 'noopener');
+        }
+      });
+
+      const normalizeUrl = url => url.replace(/\/$/, '');
+      [...document.querySelectorAll('.uk-navbar-nav li>a, .uk-nav li>a')].forEach(a => {
+        const href = a.getAttribute('href') || '';
+        if (normalizeUrl(href) === normalizeUrl(location.pathname)) {
+          a.parentNode.classList.add('uk-active');
         }
       });
     }())

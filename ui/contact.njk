@@ -1,0 +1,51 @@
+---
+layout: content
+pageTitle: Обратная связь
+eleventyComputed:
+  pageDescription: "{{ index_page.Title }} — Обратная связь"
+---
+
+
+<script src="https://hcaptcha.com/1/api.js" async defer></script>
+
+<section class="uk-section uk-section-default">
+  <div class="uk-container">
+    <h1>
+      Напишите нам,<br>
+      <small>и мы постараемся ответить как можно быстрее</small>
+    </h1>
+
+    <form action="https://submit-form.com/29rLotZk" class="uk-form-stacked">
+      <div class="uk-margin">
+        <label class="uk-form-label" for="name">Ваше имя:</label>
+        <div class="uk-form-controls">
+          <input type="text" id="name" name="name" placeholder="Имя" required="" />
+        </div>
+      </div>
+
+      <div class="uk-margin">
+        <label class="uk-form-label" for="email">Email, на который мы вам ответим:</label>
+        <div class="uk-form-controls">
+          <input type="email" id="email" name="email" placeholder="Email" required="" />
+        </div>
+      </div>
+
+      <div class="uk-margin">
+        <label class="uk-form-label" for="message">Ваше сообщение:</label>
+        <div class="uk-form-controls">
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Сообщение"
+            required=""
+            class="uk-textarea"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="h-captcha uk-margin" data-sitekey="178905a5-244e-4656-bb5f-adc9a5d40b9d"></div>
+
+      <button class="uk-button uk-button-primary uk-button-large" type="submit">Отправить</button>
+    </form>
+  </div>
+</section>
