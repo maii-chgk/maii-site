@@ -12,10 +12,10 @@ eleventyComputed:
         {% markdown %}{{ index_page.Lead | safe }}{% endmarkdown %}
       </div>
     </div>
-    <div class="scroll-hint">{% include "./index/chevron-down.svg" %}</div>
+    <a href="#section2" class="scroll-hint">{% include "./index/chevron-down.svg" %}</a>
   </section>
 
-  <section class="uk-section uk-section-secondary">
+  <section id="section2" class="uk-section uk-section-secondary">
     <div class="uk-container">
       {% markdown %}{{ index_page.Main | safe }}{% endmarkdown %}
     </div>
