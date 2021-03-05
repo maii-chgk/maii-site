@@ -9,29 +9,33 @@ eleventyComputed:
 <script src="https://hcaptcha.com/1/api.js" async defer></script>
 
 <section class="uk-section uk-section-default">
-  <div class="uk-container">
-    <h1>
-      Напишите нам,<br>
-      <small>и мы постараемся ответить как можно быстрее</small>
-    </h1>
+  <div class="uk-container contact-form">
+    <h1>Есть вопросы?</h1>
+
+    <p class="uk-text-lead">
+      Напишите нам,
+      и мы постараемся ответить как можно быстрее.
+    </p>
 
     <form action="https://submit-form.com/29rLotZk" class="uk-form-stacked">
-      <div class="uk-margin">
-        <label class="uk-form-label" for="name">Ваше имя:</label>
-        <div class="uk-form-controls">
-          <input type="text" id="name" name="name" placeholder="Имя" required="" />
+      <div class="uk-grid uk-child-width-1-1 uk-child-width-1-2@s">
+        <div class="uk-margin-bottom">
+          <label class="uk-form-label" for="name">Ваше имя<em>*</em>:</label>
+          <div class="uk-form-controls">
+            <input class="uk-input" type="text" id="name" name="name" placeholder="Имя" required="" />
+          </div>
+        </div>
+
+        <div class="uk-margin-bottom">
+          <label class="uk-form-label" for="email">Email, на который мы вам ответим<em>*</em>:</label>
+          <div class="uk-form-controls">
+            <input class="uk-input" type="email" id="email" name="email" placeholder="Email" required="" />
+          </div>
         </div>
       </div>
 
-      <div class="uk-margin">
-        <label class="uk-form-label" for="email">Email, на который мы вам ответим:</label>
-        <div class="uk-form-controls">
-          <input type="email" id="email" name="email" placeholder="Email" required="" />
-        </div>
-      </div>
-
-      <div class="uk-margin">
-        <label class="uk-form-label" for="message">Ваше сообщение:</label>
+      <div class="uk-margin-bottom">
+        <label class="uk-form-label" for="message">Ваше сообщение<em>*</em>:</label>
         <div class="uk-form-controls">
           <textarea
             id="message"
@@ -39,11 +43,12 @@ eleventyComputed:
             placeholder="Сообщение"
             required=""
             class="uk-textarea"
+            rows="6"
           ></textarea>
         </div>
       </div>
 
-      <div class="h-captcha uk-margin" data-sitekey="178905a5-244e-4656-bb5f-adc9a5d40b9d"></div>
+      <div class="h-captcha uk-margin-bottom" data-sitekey="178905a5-244e-4656-bb5f-adc9a5d40b9d"></div>
 
       <button class="uk-button uk-button-primary uk-button-large" type="submit">Отправить</button>
     </form>
