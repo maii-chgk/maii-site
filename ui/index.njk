@@ -53,7 +53,9 @@ pageDescription: index_page.Lead
             </li>
           {% endfor %}
         </ul>
-        <a class="uk-button uk-button-text" href="/news">Все новости</a>
+        {% if news.length > 3 %}
+          <a class="uk-button uk-button-text" href="/news">Все новости</a>
+        {% endif %}
       {% endif %}
     </div>
   </section>
