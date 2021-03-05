@@ -14,7 +14,14 @@ eleventyComputed:
           <span class="uk-text-muted">{{ newsItem.Date | date }}:</span>
           <a href="/news/{{ newsItem.Date }}-{{ newsItem.Title | slug }}/">{{ newsItem.Title }}</a>
         </h2>
-        {% if newsItem.Lead %}<p>{{ newsItem.Lead }}</p>{% endif %}
+        {% if newsItem.Lead or newsItem.Body %}
+          <p>
+            {{ newsItem.Lead }}
+            {% if newsItem.Body %}
+              <a class="uk-link-text uk-text-small" href="/news/{{ newsItem.Date }}-{{ newsItem.Title | slug }}/">Читать дальше</a>
+            {% endif %}
+          </p>
+        {% endif %}
       </div>
     {% endfor %}
   </div>

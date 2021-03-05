@@ -10,6 +10,7 @@ module.exports = function (eleventyConfig) {
   const md = new MarkdownIt({
     html: true,
     typographer: true,
+    linkify: true,
   });
 
   eleventyConfig.addFilter("json", (obj) => {
