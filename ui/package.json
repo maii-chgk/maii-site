@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "eleventy --serve",
-    "build": "NODE_ENV=production rm -rf _site && mkdir _site && cp -r static/ _site/static && eleventy && workbox generateSW workbox-config.js"
+    "prebuild": "rm -rf _site && mkdir _site && cp -r static/ _site/static && sync",
+    "build": "NODE_ENV=production eleventy && workbox generateSW workbox-config.js"
   },
   "keywords": [],
   "author": "Eugene Mirotin",
