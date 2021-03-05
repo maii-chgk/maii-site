@@ -65,8 +65,8 @@ h6 {
 }
 
 .site-logo svg {
-  height: auto;
-  width: 1.2em;
+  height: 1.5em;
+  margin-right: 0.25em;
 }
 
 .contact-form {
