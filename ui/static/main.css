@@ -65,6 +65,12 @@ h6 {
   text-decoration: underline;
 }
 
+@media (min-width: 960px) {
+  .uk-margin-remove-top\@s {
+    margin-top: 0 !important;
+  }
+}
+
 .site-logo svg {
   height: 1.5em;
   margin-right: 0.25em;

@@ -1,0 +1,30 @@
+---
+layout: content
+eleventyComputed:
+  pageTitle: "{{ manifest.Title }}"
+  pageDescription: "{{ manifest.Lead }}"
+---
+
+<section class="uk-section uk-section-default">
+  <div class="uk-container">
+    <article class="uk-article">
+      <h1 class="uk-article-title">{{ manifest.Title }}</h1>
+      {% if manifest.Lead %}<p class="uk-text-lead">{{ manifest.Lead }}</p>{% endif %}
+      {% if manifest.Body %}{% markdown %}{{ manifest.Body | safe }}{% endmarkdown %}{% endif %}
+
+      <div class="uk-grid uk-child-width-1-1 uk-child-width-1-2@m">
+        <ul class="uk-list">
+          {% for s in manifest.Signature | sort(false, true, 'Name') %}
+            <li>
+              {% if s.URL %}
+                <a href="{{ s.URL }}">{{ s.Name }}</a>
+              {% else %}
+                {{ s.Name }}
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>

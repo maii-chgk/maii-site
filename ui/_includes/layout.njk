@@ -13,7 +13,7 @@ bodyElements: 2
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="theme-color" content="#1e87f0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/css/uikit.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/css/uikit.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Roboto+Slab&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/static/main.css" />
 
@@ -44,7 +44,7 @@ bodyElements: 2
             <li><a href="/contact">Обратная связь</a></li>
           </ul>
         </div>
-        <div class="uk-text-right">{% markdown %}{{ index_page.Footer | safe }}{% endmarkdown %}</div>
+        <div class="uk-text-left uk-margin-top uk-text-right@s uk-margin-remove-top@s">{% markdown %}{{ index_page.Footer | safe }}{% endmarkdown %}</div>
       </div>
     </div>
   </footer>
@@ -52,12 +52,12 @@ bodyElements: 2
   <script>
     (function(){
       {% if env.NODE_ENV === 'production' %}
-      if ('serviceWorker' in navigator) {
-        // Use the window load event to keep the page load performant
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js');
-        });
-      }
+        if ('serviceWorker' in navigator) {
+          // Use the window load event to keep the page load performant
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js');
+          });
+        }
       {% endif %}
 
       [...document.querySelectorAll('a')].forEach(a => {
