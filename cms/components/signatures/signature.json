@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_signatures_signatures",
+  "info": {
+    "name": "Signature",
+    "icon": "pen-nib",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "URL": {
+      "type": "string"
+    }
+  }
+}

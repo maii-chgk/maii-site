@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/manifest",
+      "handler": "manifest.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/manifest",
+      "handler": "manifest.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/manifest",
+      "handler": "manifest.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

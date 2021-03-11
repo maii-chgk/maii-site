@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "manifests",
+  "info": {
+    "name": "Manifest",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Lead": {
+      "type": "text"
+    },
+    "Body": {
+      "type": "richtext",
+      "required": true
+    },
+    "Signature": {
+      "type": "component",
+      "repeatable": true,
+      "component": "signatures.signature"
+    }
+  }
+}
