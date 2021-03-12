@@ -21,6 +21,14 @@ module.exports = function (eleventyConfig) {
     return arr.slice(0, count);
   });
 
+  eleventyConfig.addFilter("sortNames", (arr, attr) => {
+    arr = arr.map((o) => [attr ? o[attr] : o, o]);
+    return arr
+      .map(([k, o]) => [k.split(/\s+/).reverse().join(" "), o])
+      .sort()
+      .map(([_, o]) => o);
+  });
+
   eleventyConfig.addFilter("date", (date, format = "dd.MM.yyyy") => {
     return formatDate(parseDate(date, "yyyy-MM-dd", new Date()), format, {
       locale: ru,
