@@ -34,10 +34,6 @@ h6 {
   min-height: fill-available;
 }
 
-.section-lead {
-  position: relative;
-}
-
 @keyframes jump {
   0% {
     transform: translateY(-10px);
