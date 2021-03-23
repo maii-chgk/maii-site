@@ -41,7 +41,11 @@ bodyElements: 2
       <div class="uk-grid uk-grid-divider uk-child-width-expand@s" uk-grid>
         <div class="uk-first-column">
           <ul class="uk-nav">
-            <li><a href="/contact">Обратная связь</a></li>
+            {% for item in menu %}
+              <li>
+                <a href="{{ item.link }}">{{ item.title }}</a>
+              </li>
+            {% endfor %}
           </ul>
         </div>
         <div class="uk-text-left uk-margin-top uk-text-right@s uk-margin-remove-top@s">{% markdown %}{{ index_page.Footer | safe }}{% endmarkdown %}</div>

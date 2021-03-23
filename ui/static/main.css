@@ -72,6 +72,10 @@ h6 {
   margin-right: 0.25em;
 }
 
+.index-logo {
+  opacity: 0.8;
+}
+
 .contact-form {
   max-width: 720px;
 }
