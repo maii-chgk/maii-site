@@ -2,6 +2,8 @@ module.exports = {
   globDirectory: "_site/",
   globPatterns: ["**/*.{html,png,ico,svg,jpg,jpeg,css,js}"],
   swDest: "_site/sw.js",
+  directoryIndex: "index.html",
+  skipWaiting: true,
 
   runtimeCaching: [
     {
