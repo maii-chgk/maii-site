@@ -34,6 +34,10 @@ h6 {
   min-height: fill-available;
 }
 
+.section-first {
+  padding-top: 70px;
+}
+
 @keyframes jump {
   0% {
     transform: translateY(-10px);
@@ -65,11 +69,15 @@ h6 {
   .uk-margin-remove-top\@s {
     margin-top: 0 !important;
   }
+  .uk-margin-large-bottom\@m {
+    margin-bottom: 30px !important;
+  }
 }
 
 .site-logo svg {
-  height: 1.5em;
+  width: 1em;
   margin-right: 0.25em;
+  max-width: unset;
 }
 
 .index-logo {

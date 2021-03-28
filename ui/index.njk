@@ -4,7 +4,7 @@ eleventyComputed:
   pageDescription: "{{ index_page.Lead }}"
 ---
 <article class="page-content">
-  <section class="uk-section uk-section-primary uk-flex uk-flex-middle uk-text-center section-full uk-position-relative">
+  <section class="uk-section uk-section-primary uk-flex uk-flex-middle uk-text-center section-full section-first uk-position-relative">
 
     <div class="uk-position-top">
       <nav class="uk-navbar-container uk-navbar-transparent">
@@ -26,7 +26,7 @@ eleventyComputed:
     </div>
 
     <div class="uk-container">
-      <h1 class="uk-margin-large-bottom">{{ index_page.Title }}</h1>
+      <h1 class="uk-margin-bottom uk-margin-large-bottom@m">{{ index_page.Title }}</h1>
       <div class="uk-text-lead">
         {# NB: do not split/indent the following line and other MD blocks #}
         {% markdown %}{{ index_page.Lead | safe }}{% endmarkdown %}
