@@ -38,11 +38,19 @@ h6 {
   padding-top: 70px;
 }
 
+.fitVids-wrapperOuter {
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .fitVids-wrapper {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
 }
+
 .fitVids-wrapper iframe {
   position: absolute;
   top: 0;

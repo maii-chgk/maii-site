@@ -11,4 +11,8 @@ module.exports = [
     title: "Наше видение",
     link: "/vision",
   },
+  {
+    title: "Запись УC",
+    link: "/assembly",
+  },
 ];
