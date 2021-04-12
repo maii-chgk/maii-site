@@ -3,5 +3,6 @@
   "routes": [
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/static/arch/$1" }
-  ]
+  ],
+  "rewrites": [{ "source": "/statute", "destination": "/statute/ru" }]
 }
