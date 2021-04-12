@@ -13,12 +13,18 @@ eleventyComputed:
 <section class="uk-section uk-section-default">
   <div class="uk-container">
     <ul class="uk-subnav uk-subnav-pill">
-      {% for lang, _ in statute.texts  %}
+      {% for version in statute.texts  %}
         <li
-          class="{{ 'uk-active' if lang === statute.defaultLang else '' }}">
-          <a href="{{ '/statute/' + lang if lang !== statute.defaultLang else '#' }}">
-            {{ statute.langNames[lang] }}
-          </a>
+          class="{{ 'uk-active' if version.lang === statuteVersion.lang else '' }}">
+          {% if version.lang === statuteVersion.lang %}
+            <a href="#" disabled>
+              {{ statute.langNames[version.lang] }}
+            </a>
+          {% else %}
+            <a href="{{ '/statute/' + version.lang }}">
+              {{ statute.langNames[version.lang] }}
+            </a>
+          {% endif %}
         </li>
       {% endfor %}
     </ul>
