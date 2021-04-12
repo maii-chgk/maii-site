@@ -72,9 +72,17 @@ bodyElements: 2
       });
 
       const normalizeUrl = url => url.replace(/\/$/, '');
+      const compareUrls = (url1, url2, useFuzzy) => {
+        if (!useFuzzy) {
+          return url1 === url2;
+        }
+        return url2.indexOf(url1) === 0;
+      };
       [...document.querySelectorAll('.uk-navbar-nav li>a, .uk-nav li>a')].forEach(a => {
         const href = a.getAttribute('href') || '';
-        if (normalizeUrl(href) === normalizeUrl(location.pathname)) {
+        if (compareUrls(normalizeUrl(href),
+          normalizeUrl(location.pathname),
+          a.getAttribute('data-fuzzy') === 'true')) {
           a.parentNode.classList.add('uk-active');
         }
       });

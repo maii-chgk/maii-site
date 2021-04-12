@@ -2,6 +2,7 @@ module.exports = [
   {
     title: "Устав",
     link: "/statute",
+    fuzzy: true,
   },
   {
     title: "Новости",

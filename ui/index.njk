@@ -16,7 +16,7 @@ eleventyComputed:
               </li>
               {% for item in menu %}
                 <li>
-                  <a href="{{ item.link }}">{{ item.title }}</a>
+                  <a href="{{ item.link }}" data-fuzzy="{{ item.fuzzy }}">{{ item.title }}</a>
                 </li>
               {% endfor %}
             </ul>
