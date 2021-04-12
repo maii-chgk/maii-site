@@ -108,3 +108,11 @@ h6 {
 .contact-form {
   max-width: 720px;
 }
+
+.statute-version {
+  display: none;
+}
+
+.statute-version[data-visible="true"] {
+  display: block;
+}

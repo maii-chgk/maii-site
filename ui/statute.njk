@@ -1,0 +1,46 @@
+---
+layout: content
+pageTitle: Устав
+eleventyComputed:
+  pageDescription: "{{ index_page.Title }} — Устав"
+---
+
+<section class="uk-section uk-section-default">
+  <div class="uk-container">
+    <ul class="uk-subnav uk-subnav-pill lang-switcher">
+      {% for lang, _ in statute.texts  %}
+        <li data-lang="{{ lang }}"
+          class="{{ 'uk-active' if lang === statute.defaultLang else '' }}">
+          <a href="#" data-lang="{{ lang }}">{{ statute.langNames[lang] }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    {% for lang, data in statute.texts  %}
+      <section class="statute-version"
+        data-lang="{{ lang }}"
+        data-visible="{{ lang === statute.defaultLang }}">
+        <h1>{{ data.title }}</h1>
+        {% markdown %}{{ data.body | safe }}{% endmarkdown %}
+      </section>
+    {% endfor %}
+  </div>
+</section>
+
+<script>
+  (function(){
+    [...document.querySelectorAll('.lang-switcher a')].forEach(a => {
+      a.addEventListener('click', event => {
+        event.preventDefault();
+        const lang = a.getAttribute('data-lang' || '');
+        [...document.querySelectorAll('.lang-switcher li')].forEach(li => {
+          li.classList.toggle('uk-active',
+            li.getAttribute('data-lang') === lang);
+        });
+        [...document.querySelectorAll('.statute-version')].forEach(s => {
+          s.setAttribute('data-visible',
+            '' + (s.getAttribute('data-lang') === lang));
+        });
+      });
+    });
+  })();
+</script>

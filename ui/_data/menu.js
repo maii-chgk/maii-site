@@ -1,11 +1,11 @@
 module.exports = [
   {
-    title: "Новости",
-    link: "/news",
+    title: "Устав",
+    link: "/statute",
   },
   {
-    title: "Обратная связь",
-    link: "/contact",
+    title: "Новости",
+    link: "/news",
   },
   {
     title: "Наше видение",
@@ -14,5 +14,9 @@ module.exports = [
   {
     title: "Запись УC",
     link: "/assembly",
+  },
+  {
+    title: "Обратная связь",
+    link: "/contact",
   },
 ];
