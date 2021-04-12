@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "redirects": [{ "source": "/statute", "destination": "/statute/ru" }],
   "rewrites": [{ "source": "/:path*", "destination": "/static/arch/:path" }],
-  "redirects": [{ "source": "/statute", "destination": "/statute/ru" }]
+  "trailingSlash": false
 }
