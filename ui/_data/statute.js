@@ -19,10 +19,7 @@ module.exports = async () => {
       return { ...attributes, body };
     })
   );
-  texts = langs.reduce((acc, lang, i) => {
-    acc[lang] = texts[i];
-    return acc;
-  }, {});
+  texts = langs.map((lang, i) => ({ lang, ...texts[i] }));
   return {
     texts,
     defaultLang: langs[0],

@@ -1,8 +1,8 @@
 module.exports = [
-  {
-    title: "Устав",
-    link: "/statute",
-  },
+  // {
+  //   title: "Устав",
+  //   link: "/statute",
+  // },
   {
     title: "Новости",
     link: "/news",
