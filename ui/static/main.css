@@ -108,3 +108,57 @@ h6 {
 .contact-form {
   max-width: 720px;
 }
+
+.statute-text {
+  counter-reset: h1;
+}
+
+.statute-text h1::before {
+  counter-increment: h1;
+  content: counter(h1) ". ";
+}
+
+.statute-text h1 {
+  counter-reset: h2;
+}
+
+.statute-text h2::before {
+  counter-increment: h2;
+  content: counter(h1) "." counter(h2) ". ";
+}
+
+.statute-text h1 + ol {
+  counter-reset: h2;
+  list-style: none;
+}
+
+.statute-text h1 + ol > li::before {
+  display: inline-block;
+  counter-increment: h2;
+  content: counter(h1) "." counter(h2) ". ";
+  margin-right: 0.5em;
+}
+
+.statute-text h2 + ol {
+  counter-reset: h3;
+  list-style: none;
+}
+
+.statute-text h2 + ol > li::before {
+  display: inline-block;
+  counter-increment: h3;
+  content: counter(h1) "." counter(h2) "." counter(h3) ". ";
+  margin-right: 0.5em;
+}
+
+.statute-text ol > li {
+  margin-bottom: 20px;
+}
+
+.statute-text ol > li p {
+  display: inline-block;
+}
+
+.statute-text ol > li > ul > li {
+  margin-bottom: 5px;
+}

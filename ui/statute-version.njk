@@ -29,9 +29,11 @@ eleventyComputed:
       {% endfor %}
     </ul>
 
-    <section class="statute-version">
+    <article>
       <h1>{{ statuteVersion.title }}</h1>
-      {% markdown %}{{ statuteVersion.body | safe }}{% endmarkdown %}
-    </section>
+      <section class="statute-text">
+        {% markdown %}{{ statuteVersion.body | safe }}{% endmarkdown %}
+      </section>
+    </article>
   </div>
 </section>
