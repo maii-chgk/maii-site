@@ -1,0 +1,31 @@
+---
+layout: content
+pagination:
+    data: statute.texts
+    size: 1
+    alias: statuteVersion
+permalink: "statute/{{ statuteVersion.lang }}/"
+eleventyComputed:
+  pageTitle: "{{ statuteVersion.title }}"
+  pageDescription: "{{ index_page.Title }} — Устав"
+---
+
+<section class="uk-section uk-section-default">
+  <div class="uk-container">
+    <ul class="uk-subnav uk-subnav-pill">
+      {% for lang, _ in statute.texts  %}
+        <li
+          class="{{ 'uk-active' if lang === statute.defaultLang else '' }}">
+          <a href="{{ '/statute/' + lang if lang !== statute.defaultLang else '#' }}">
+            {{ statute.langNames[lang] }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <section class="statute-version">
+      <h1>{{ statuteVersion.title }}</h1>
+      {% markdown %}{{ statuteVersion.body | safe }}{% endmarkdown %}
+    </section>
+  </div>
+</section>
