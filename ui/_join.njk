@@ -1,0 +1,52 @@
+<script src="https://hcaptcha.com/1/api.js" async defer></script>
+
+<h1 id="join">Вступить в организацию</h1>
+
+<form action="https://submit-form.com/BEtGO0Ol" class="uk-form-stacked join-form" method="post">
+  <div class="uk-grid uk-child-width-1-1">
+    <div class="uk-margin-bottom uk-width-1-2@s">
+      <label class="uk-form-label" for="name">Полное имя кириллицей<em>*</em>:</label>
+      <div class="uk-form-controls">
+        <input class="uk-input" type="text" id="name" name="name" placeholder="Фамилия Имя Отчество" required />
+      </div>
+    </div>
+
+    <div class="uk-margin-bottom uk-width-1-2@s">
+      <label class="uk-form-label" for="name-lat">Имя латиницей (как в документе)<em>*</em>:</label>
+      <div class="uk-form-controls">
+        <input class="uk-input" type="text" id="name-lat" name="name-lat" placeholder="First Name Last Name" required />
+      </div>
+    </div>
+
+    <div class="uk-margin-bottom">
+      <label class="uk-form-label" for="email">Email, на который мы вам ответим<em>*</em>:</label>
+      <div class="uk-form-controls">
+        <input class="uk-input" type="email" id="email" name="email" placeholder="email@some.domain" required />
+      </div>
+    </div>
+  </div>
+
+  <div class="uk-margin-bottom">
+    <label>
+      <input class="uk-checkbox" type="checkbox" name="join" value="Да" required>
+      &nbsp;Хочу вступить в Международную ассоциацию интеллектуальных игр<em>*</em>
+    </label>
+    <p>
+      Вступая в МАИИ, вы принимаете нашу
+      <a href="/p/policy" target="_blank" rel="noopener noreferrer">Политику обработки персональных данных</a>.
+    </p>
+  </div>
+
+  <div class="uk-margin-bottom">
+    <label>
+      <input class="uk-checkbox" type="checkbox" name="join" value="Да">
+      &nbsp;Также хочу получать рассылку новостей МАИИ
+    </label>
+  </div>
+
+  <div class="h-captcha uk-margin-bottom" data-sitekey="178905a5-244e-4656-bb5f-adc9a5d40b9d"></div>
+
+  <p>После отправки формы вы получите письмо с просьбой подтвердить заявку и адрес электронной почты.</p>
+
+  <button class="uk-button uk-button-primary uk-button-large" type="submit">Отправить</button>
+</form>
