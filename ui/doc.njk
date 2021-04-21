@@ -1,0 +1,23 @@
+---
+layout: content
+pagination:
+    data: docs
+    size: 1
+    alias: doc
+permalink: "docs/{{ doc.Date }}-{{ doc.Title | slug }}/"
+eleventyComputed:
+  pageTitle: "{{ doc.Title }}"
+  pageDescription: "{{ doc.Lead }}"
+---
+
+<section class="uk-section uk-section-default">
+  <div class="uk-container">
+    <h1></h1>
+    <article class="uk-article">
+      <h1 class="uk-article-title">{{ doc.Title }}</h1>
+      <p class="uk-article-meta">{{ doc.Date | date }}</p>
+      {% if doc.Lead %}<p class="uk-text-lead">{{ doc.Lead }}</p>{% endif %}
+      {% if doc.Body %}{% markdown %}{{ doc.Body | safe }}{% endmarkdown %}{% endif %}
+    </article>
+  </div>
+</section>

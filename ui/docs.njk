@@ -1,0 +1,28 @@
+---
+layout: content
+pageTitle: Документы
+eleventyComputed:
+  pageDescription: "{{ index_page.Title }} — Документы"
+---
+
+<section class="uk-section uk-section-default">
+  <div class="uk-container">
+    <h1>Документы</h1>
+    {% for doc in docs | sort(true, false, 'Date') %}
+      <div class="uk-card uk-card-body uk-width-1-1">
+        <h2 class="uk-card-title">
+          <span class="uk-text-muted">{{ doc.Date | date }}:</span>
+          <a href="/docs/{{ doc.Date }}-{{ doc.Title | slug }}/">{{ doc.Title }}</a>
+        </h2>
+        {% if doc.Lead or doc.Body %}
+          <p>
+            {{ doc.Lead }}
+            {% if doc.Body %}
+              <a class="uk-link-text uk-text-small" href="/docs/{{ doc.Date }}-{{ doc.Title | slug }}/">Читать дальше</a>
+            {% endif %}
+          </p>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>

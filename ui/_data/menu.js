@@ -9,6 +9,10 @@ module.exports = [
     link: "/news",
   },
   {
+    title: "Документы",
+    link: "/docs",
+  },
+  {
     title: "Наше видение",
     link: "/vision",
   },
