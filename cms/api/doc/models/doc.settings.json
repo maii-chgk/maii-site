@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "docs",
+  "info": {
+    "name": "Doc"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Summary": {
+      "type": "text"
+    },
+    "Body": {
+      "type": "richtext"
+    }
+  }
+}
