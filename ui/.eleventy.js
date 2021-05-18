@@ -29,6 +29,30 @@ module.exports = function (eleventyConfig) {
       .map(([_, o]) => o);
   });
 
+  const cmp = (spec) => (a, b) => {
+    a = a[spec[0]];
+    b = b[spec[0]];
+
+    if (a === b) {
+      return 0;
+    }
+
+    return spec[1] ? (b < a ? -1 : 1) : a < b ? -1 : 1;
+  };
+
+  eleventyConfig.addFilter("sortMultiple", (arr, specs) => {
+    specs = specs.map((spec) => (Array.isArray(spec) ? spec : [spec, false]));
+    return arr.sort((a, b) => {
+      for (const spec of specs) {
+        const res = cmp(spec)(a, b);
+        if (res !== 0) {
+          return res;
+        }
+      }
+      return 0;
+    });
+  });
+
   eleventyConfig.addFilter("date", (date, format = "dd.MM.yyyy") => {
     return formatDate(parseDate(date, "yyyy-MM-dd", new Date()), format, {
       locale: ru,
