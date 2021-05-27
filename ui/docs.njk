@@ -14,9 +14,9 @@ eleventyComputed:
           <span class="uk-text-muted">{{ doc.Date | date }}:</span>
           <a href="/docs/{{ doc.Date }}-{{ doc.Title | slug }}/">{{ doc.Title }}</a>
         </h2>
-        {% if doc.Lead or doc.Body %}
+        {% if doc.Summary or doc.Body %}
           <p>
-            {{ doc.Lead }}
+            {{ doc.Summary }}
             {% if doc.Body %}
               <a class="uk-link-text uk-text-small" href="/docs/{{ doc.Date }}-{{ doc.Title | slug }}/">Читать дальше</a>
             {% endif %}

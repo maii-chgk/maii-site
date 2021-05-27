@@ -15,7 +15,7 @@ eleventyComputed:
     <article class="uk-article">
       <h1 class="uk-article-title">{{ doc.Title }}</h1>
       <p class="uk-article-meta">{{ doc.Date | date }}</p>
-      {% if doc.Lead %}<p class="uk-text-lead">{{ doc.Summary }}</p>{% endif %}
+      {% if doc.Summary %}<p class="uk-text-lead">{{ doc.Summary }}</p>{% endif %}
       {% if doc.Body %}{% markdown %}{{ doc.Body | safe }}{% endmarkdown %}{% endif %}
     </article>
   </div>
