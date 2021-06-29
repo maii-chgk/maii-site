@@ -9,7 +9,7 @@ const langNames = {
 };
 
 const url = (lang) =>
-  `https://raw.githubusercontent.com/razumau/statute_templating/main/statute.${lang}.md`;
+  `https://raw.githubusercontent.com/maii-chgk/documents/main/statute.${lang}.md`;
 
 module.exports = async () => {
   let texts = await Promise.all(
