@@ -23,7 +23,7 @@ bodyElements: 2
   <meta property="og:locale" content="ru_RU" />
   <meta property="og:type" content="website" />
   {% if env.HOST %}
-    <meta property="og:url" content="{{ env.HOST }}" />
+    <meta property="og:url" content="{{ env.HOST }}{{ page.url }}" />
     <meta property="og:image" content="{{ env.HOST }}/static/favicon-512.png" />
   {% endif %}
 

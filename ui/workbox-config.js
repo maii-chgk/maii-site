@@ -17,6 +17,16 @@ module.exports = {
       },
     },
     {
+      urlPattern: /\/$/,
+      handler: "NetworkFirst",
+      options: {
+        cacheName: "html",
+        expiration: {
+          maxEntries: 20,
+        },
+      },
+    },
+    {
       urlPattern: /\.(?:css|js)$/,
       handler: "StaleWhileRevalidate",
       options: {
