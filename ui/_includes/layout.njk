@@ -40,8 +40,13 @@ bodyElements: 2
     <div class="uk-container uk-text-small uk-text-muted">
       <div class="uk-grid uk-grid-divider uk-child-width-expand@s" uk-grid>
         <div class="uk-first-column">
-          <ul class="uk-nav">
+          <ul class="uk-nav uk-column-1-2 uk-margin-bottom uk-margin-remove-bottom@s">
             {% for item in menu %}
+              <li>
+                <a href="{{ item.link }}">{{ item.title }}</a>
+              </li>
+            {% endfor %}
+            {% for item in externalMenu %}
               <li>
                 <a href="{{ item.link }}">{{ item.title }}</a>
               </li>

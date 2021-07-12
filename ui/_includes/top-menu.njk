@@ -1,4 +1,4 @@
-{% macro topMenu(isIndex, menu) %}
+{% macro topMenu(isIndex, menu, externalMenu) %}
 
 <nav class="uk-navbar-container{% if isIndex %} uk-navbar-transparent {% endif %}">
   <div class="uk-container uk-navbar menu-container">
@@ -40,6 +40,14 @@
         {% for item in menu %}
           <li>
             <a href="{{ item.link }}" data-fuzzy="{{ item.fuzzy }}">{{ item.title }}</a>
+          </li>
+        {% endfor %}
+
+        <li class="uk-nav-divider"></li>
+
+        {% for item in externalMenu %}
+          <li>
+            <a href="{{ item.link }}">{{ item.title }}</a>
           </li>
         {% endfor %}
       </ul>

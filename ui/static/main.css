@@ -130,8 +130,22 @@ h6 {
   .uk-margin-remove-top\@s {
     margin-top: 0 !important;
   }
+
+  .uk-margin-remove-bottom\@s {
+    margin-bottom: 0 !important;
+  }
   .uk-margin-large-bottom\@m {
     margin-bottom: 30px !important;
+  }
+}
+
+.index-title {
+  font-size: 2rem;
+}
+
+@media (min-width: 960px) {
+  .index-title {
+    font-size: 2.23125rem;
   }
 }
 

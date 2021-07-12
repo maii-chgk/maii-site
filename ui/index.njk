@@ -8,12 +8,12 @@ eleventyComputed:
 <article class="page-content">
   <section class="uk-section uk-section-primary uk-flex uk-flex-middle uk-text-center section-full section-first uk-position-relative">
 
-    <div class="uk-position-top">
-      {{ topMenu.topMenu(true, menu) }}
-    </div>
+    <header class="uk-position-top">
+      {{ topMenu.topMenu(true, menu, externalMenu) }}
+    </header>
 
     <div class="uk-container">
-      <h1 class="uk-margin-bottom uk-margin-large-bottom@m">{{ index_page.Title }}</h1>
+      <h1 class="uk-margin-bottom uk-margin-large-bottom@m index-title">{{ index_page.Title }}</h1>
       <div class="uk-text-lead">
         {# NB: do not split/indent the following line and other MD blocks #}
         {% markdown %}{{ index_page.Lead | safe }}{% endmarkdown %}
