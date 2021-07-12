@@ -1,0 +1,21 @@
+---
+layout: content
+pagination:
+    data: pages
+    size: 1
+    alias: p
+permalink: "p/{{ p.Slug | d(p.Title, true) | slug }}/"
+eleventyComputed:
+  pageTitle: "{{ p.Title }}"
+  pageDescription: "{{ p.Lead }}"
+---
+
+<section class="uk-section uk-section-default">
+  <div class="uk-container">
+    <article class="uk-article">
+      <h1 class="uk-article-title">{{ p.Title }}</h1>
+      {% if p.Lead %}<p class="uk-text-lead">{{ p.Lead }}</p>{% endif %}
+      {% if p.Body %}{% markdown %}{{ p.Body | safe }}{% endmarkdown %}{% endif %}
+    </article>
+  </div>
+</section>
