@@ -20,13 +20,25 @@
       </ul>
     </div>
 
-    <div class="uk-navbar-right uk-hidden@l">
-      <button class="hamburger{% if isIndex %} index-hamburger{% endif %}"
-        type="button" uk-toggle="target: #mobile-menu">
-        <span class="hamburger-line">open menu</span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
+    <div class="uk-navbar-right">
+      <span class="uk-hidden@l">
+        <button class="hamburger{% if isIndex %} index-hamburger{% endif %}"
+          type="button" uk-toggle="target: #mobile-menu">
+          <span class="hamburger-line">open menu</span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </span>
+
+      <ul class="uk-navbar-nav uk-navbar-nav-default uk-visible@l top-social-nav">
+        {% for item in externalMenu %}
+          <li>
+            <a title="{{ item.title }}" href="{{ item.link }}">
+              {% include "../static/icons/" + item.icon + ".svg" %}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
 </nav>

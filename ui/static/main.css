@@ -74,6 +74,15 @@ h6 {
   opacity: 0.8;
 }
 
+.index-hamburger .hamburger-line {
+  background-color: white;
+  opacity: 0.5;
+}
+
+.index-hamburger:hover .hamburger-line {
+  background-color: white;
+  opacity: 0.7;
+}
 .section-first {
   padding-top: 70px;
 }
@@ -147,6 +156,22 @@ h6 {
   .index-title {
     font-size: 2.23125rem;
   }
+}
+
+.top-social-nav li a {
+  padding-left: 4px;
+  padding-right: 4px;
+  opacity: 0.5;
+}
+
+.top-social-nav li a:hover {
+  opacity: 0.7;
+}
+
+.top-social-nav svg {
+  fill: white;
+  height: 22px;
+  width: auto;
 }
 
 .site-logo svg {

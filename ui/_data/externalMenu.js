@@ -1,7 +1,7 @@
 module.exports = [
   {
     title: "Форум",
-    icon: "",
+    icon: "link",
     link: "https://forum.znatoki.site/",
   },
   {
