@@ -3,26 +3,13 @@ layout: layout
 eleventyComputed:
   pageDescription: "{{ index_page.Lead }}"
 ---
+{% import "top-menu.njk" as topMenu %}
+
 <article class="page-content">
   <section class="uk-section uk-section-primary uk-flex uk-flex-middle uk-text-center section-full section-first uk-position-relative">
 
     <div class="uk-position-top">
-      <nav class="uk-navbar-container uk-navbar-transparent">
-        <div class="uk-container">
-          <div class="uk-navbar-left">
-            <ul class="uk-navbar-nav">
-              <li>
-                <span class="uk-navbar-item site-logo index-logo">{% include "./static/logo.svg" %}</span>
-              </li>
-              {% for item in menu %}
-                <li>
-                  <a href="{{ item.link }}" data-fuzzy="{{ item.fuzzy }}">{{ item.title }}</a>
-                </li>
-              {% endfor %}
-            </ul>
-          </div>
-        </div>
-      </nav>
+      {{ topMenu.topMenu(true, menu) }}
     </div>
 
     <div class="uk-container">

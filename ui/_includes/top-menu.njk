@@ -1,0 +1,51 @@
+{% macro topMenu(isIndex, menu) %}
+
+<nav class="uk-navbar-container{% if isIndex %} uk-navbar-transparent {% endif %}">
+  <div class="uk-container uk-navbar menu-container">
+    <div class="uk-navbar-left">
+      <ul class="uk-navbar-nav">
+        <li>
+          {% if isIndex %}
+            <span class="uk-navbar-item site-logo index-logo">{% include "../static/logo.svg" %}</span>
+          {% else %}
+            <a class="site-logo" href="/">{% include "../static/logo.svg" %}&nbsp;Домой</a>
+          {% endif %}
+        </li>
+
+        {% for item in menu %}
+          <li class="uk-visible@l">
+            <a href="{{ item.link }}" data-fuzzy="{{ item.fuzzy }}">{{ item.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="uk-navbar-right uk-hidden@l">
+      <button class="hamburger{% if isIndex %} index-hamburger{% endif %}"
+        type="button" uk-toggle="target: #mobile-menu">
+        <span class="hamburger-line">open menu</span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div uk-offcanvas="flip: true" id="mobile-menu">
+  <div class="uk-offcanvas-bar">
+
+      <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+      <ul class="uk-nav uk-nav-default uk-margin-top uk-text-large">
+        {% for item in menu %}
+          <li>
+            <a href="{{ item.link }}" data-fuzzy="{{ item.fuzzy }}">{{ item.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+
+  </div>
+</div>
+
+{% endmacro %}
+

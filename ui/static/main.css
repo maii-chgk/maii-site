@@ -34,6 +34,46 @@ h6 {
   min-height: fill-available;
 }
 
+.menu-container .uk-navbar-left {
+  padding-left: 15px;
+}
+.menu-container .uk-navbar-right {
+  padding-right: 15px;
+}
+
+.hamburger {
+  font-size: 0;
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+  display: block;
+  width: 24px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.hamburger-line {
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #999;
+}
+
+.hamburger-line + .hamburger-line {
+  margin-top: 4px;
+}
+
+.hamburger:hover .hamburger-line,
+.hamburger:focus .hamburger-line,
+.hamburger:active .hamburger-line {
+  background-color: #666;
+}
+
+.index-hamburger {
+  opacity: 0.8;
+}
+
 .section-first {
   padding-top: 70px;
 }

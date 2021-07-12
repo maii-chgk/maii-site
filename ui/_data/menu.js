@@ -5,6 +5,10 @@ module.exports = [
     fuzzy: true,
   },
   {
+    title: "Рабочие органы",
+    link: "/p/who",
+  },
+  {
     title: "Новости",
     link: "/news",
   },
