@@ -13,6 +13,10 @@ module.exports = [
     link: "/news",
   },
   {
+    title: "Турниры",
+    link: "/p/aegis",
+  },
+  {
     title: "Документы",
     link: "/docs",
   },
