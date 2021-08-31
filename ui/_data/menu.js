@@ -25,10 +25,6 @@ module.exports = [
     link: "/vision",
   },
   {
-    title: "Запись УC",
-    link: "/assembly",
-  },
-  {
     title: "Обратная связь",
     link: "/contact",
   },
