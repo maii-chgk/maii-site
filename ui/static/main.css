@@ -28,6 +28,10 @@ h6 {
   font-family: "Roboto Slab", sans-serif;
 }
 
+em {
+  color: inherit;
+}
+
 .section-full {
   min-height: 100vh;
   min-height: -webkit-fill-available;
