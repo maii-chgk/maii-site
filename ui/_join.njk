@@ -1,0 +1,55 @@
+<script src="https://hcaptcha.com/1/api.js" async defer></script>
+
+<h1 id="join">Вступить в организацию</h1>
+
+<form action="https://submit-form.com/BEtGO0Ol" class="uk-form-stacked join-form" method="post">
+  <input type="hidden" name="_redirect" value="https://www.chgk.info/join_confirmation"/>
+  <input type="hidden" name="_append" value="false" />
+
+  <div class="uk-grid uk-child-width-1-1">
+    <div class="uk-margin-bottom uk-width-1-2@s">
+      <label class="uk-form-label" for="name">Имя кириллицей<em>*</em>:</label>
+      <div class="uk-form-controls">
+        <input class="uk-input" type="text" id="name" name="name" placeholder="Имя Фамилия" required />
+      </div>
+    </div>
+
+    <div class="uk-margin-bottom uk-width-1-2@s">
+      <label class="uk-form-label" for="name-lat">Имя латиницей (как в документе)<em>*</em>:</label>
+      <div class="uk-form-controls">
+        <input class="uk-input" type="text" id="name-lat" name="name-lat" placeholder="First_Name Last_Name" required />
+      </div>
+    </div>
+
+    <div class="uk-margin-bottom">
+      <label class="uk-form-label" for="email">Email, на который мы вам ответим<em>*</em>:</label>
+      <div class="uk-form-controls">
+        <input class="uk-input" type="email" id="email" name="email" placeholder="email@some.domain" required />
+      </div>
+    </div>
+  </div>
+
+  <div class="uk-margin-bottom">
+    <label>
+      <input class="uk-checkbox" type="checkbox" name="join" value="Да" required>
+      &nbsp;Хочу вступить в Международную ассоциацию интеллектуальных игр<em>*</em>
+    </label>
+    <p>
+      Ваши персональные данные обрабатываются в соответствии с&nbsp;
+      <a href="/p/privacy" target="_blank" rel="noopener noreferrer">политикой обработки персональных данных МАИИ</a>.
+    </p>
+  </div>
+
+  <div class="uk-margin-bottom">
+    <label>
+      <input class="uk-checkbox" type="checkbox" name="subscribe" value="Да">
+      &nbsp;Также хочу получать рассылку новостей МАИИ.
+    </label>
+  </div>
+
+  <div class="h-captcha uk-margin-bottom" data-sitekey="178905a5-244e-4656-bb5f-adc9a5d40b9d"></div>
+
+  <p>После отправки формы вы получите письмо с просьбой подтвердить заявку.</p>
+
+  <button class="uk-button uk-button-primary uk-button-large" type="submit">Отправить</button>
+</form>
