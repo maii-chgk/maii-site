@@ -1,12 +1,7 @@
 module.exports = [
   {
-    title: "Устав",
-    link: "/statute",
-    fuzzy: true,
-  },
-  {
-    title: "Рабочие органы",
-    link: "/p/who",
+    title: "О нас",
+    link: "/p/about",
   },
   {
     title: "Новости",
@@ -14,15 +9,20 @@ module.exports = [
   },
   {
     title: "Турниры",
-    link: "/p/aegis",
+    link: "/p/tournaments",
+  },
+
+  {
+    title: "Рейтинг",
+    link: "/p/rating",
+  },
+  {
+    title: "Библиотека",
+    link: "/p/library",
   },
   {
     title: "Документы",
-    link: "/docs",
-  },
-  {
-    title: "Наше видение",
-    link: "/vision",
+    link: "/p/documents",
   },
   {
     title: "Обратная связь",
