@@ -28,4 +28,8 @@ module.exports = [
     title: "Обратная связь",
     link: "/contact",
   },
+  {
+    title: "Обращение в ДГ",
+    link: "/discipline",
+  },
 ];
