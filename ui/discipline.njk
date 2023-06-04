@@ -2,6 +2,7 @@
 layout: content
 pageTitle: Обращение в дисциплинарную группу
 eleventyComputed:
+  pageTitle: "{{ index_page.Title }} — Обращение в дисциплинарную группу"
   pageDescription: "{{ index_page.Title }} — Обращение в дисциплинарную группу"
 ---
 
@@ -70,14 +71,52 @@ eleventyComputed:
         </div>
       </div>
 
-      <label for="files">Скриншоты или другие изображения </label>
-      <input
-        type="hidden"
-        id="screenshots"
-        name="screenshots"
-        role="uploadcare-uploader"
-        data-public-key="e91298be1013b9b1d3de"
-      />
+      <label for="files">Скриншоты или другие изображения (до пяти штук) </label>
+      <div class="uk-margin-bottom">
+        <input
+          type="hidden"
+          id="screenshots"
+          name="screenshots"
+          role="uploadcare-uploader"
+          data-public-key="e91298be1013b9b1d3de"
+        />
+      </div>
+      <div class="uk-margin-bottom">
+        <input
+          type="hidden"
+          id="screenshots"
+          name="screenshots"
+          role="uploadcare-uploader"
+          data-public-key="e91298be1013b9b1d3de"
+        />
+      </div>
+      <div class="uk-margin-bottom">
+        <input
+          type="hidden"
+          id="screenshots"
+          name="screenshots"
+          role="uploadcare-uploader"
+          data-public-key="e91298be1013b9b1d3de"
+        />
+      </div>
+      <div class="uk-margin-bottom">
+        <input
+          type="hidden"
+          id="screenshots"
+          name="screenshots"
+          role="uploadcare-uploader"
+          data-public-key="e91298be1013b9b1d3de"
+        />
+      </div>
+      <div class="uk-margin-bottom">
+        <input
+          type="hidden"
+          id="screenshots"
+          name="screenshots"
+          role="uploadcare-uploader"
+          data-public-key="e91298be1013b9b1d3de"
+        />
+      </div>
 
       <div class="h-captcha uk-margin-bottom" data-sitekey="178905a5-244e-4656-bb5f-adc9a5d40b9d"></div>
 
