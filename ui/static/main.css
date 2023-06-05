@@ -38,13 +38,6 @@ em {
   min-height: fill-available;
 }
 
-.menu-container .uk-navbar-left {
-  padding-left: 15px;
-}
-.menu-container .uk-navbar-right {
-  padding-right: 15px;
-}
-
 .hamburger {
   font-size: 0;
   border: 0;
