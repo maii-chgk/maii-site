@@ -242,3 +242,10 @@ em {
 .join-form {
   max-width: 800px;
 }
+
+article {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
