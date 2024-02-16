@@ -6,7 +6,7 @@ eleventyComputed:
 ---
 
 <section class="uk-section uk-section-default">
-  <div class="uk-container">
+  <div class="uk-container content-container">
     <h1>Новости</h1>
     {% for newsItem in news | sortMultiple([['Date', true], ['published_at', true]]) %}
       <div class="uk-card uk-card-body uk-width-1-1">

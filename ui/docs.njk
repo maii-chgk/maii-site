@@ -6,7 +6,7 @@ eleventyComputed:
 ---
 
 <section class="uk-section uk-section-default">
-  <div class="uk-container">
+  <div class="uk-container content-container">
     <h1>Документы</h1>
     {% for doc in docs | sortMultiple([['Date', true], ['published_at', true]]) %}
       <div class="uk-card uk-card-body uk-width-1-1">
