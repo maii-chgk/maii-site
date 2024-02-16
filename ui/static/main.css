@@ -242,3 +242,9 @@ em {
 .join-form {
   max-width: 800px;
 }
+
+.content-container {
+  max-width: 70ch;
+  margin-left: auto;
+  margin-right: auto;
+}
